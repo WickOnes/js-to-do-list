@@ -1,7 +1,65 @@
-@use '../../style' as s;
+#to-do-list {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.296);
+  padding: 20px;
+  font-size: 14px;
 
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+  display: grid;
+  gap: 30px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .input__task {
+    display: flex;
+    justify-content: space-between;
+
+    .input__add-task {
+      border: 1px solid rgba(0, 0, 0, 0.319);
+      border-radius: 10px;
+      width: 70%;
+      padding: 10px;
+    }
+
+    .button__add-task {
+      background-color: rgb(0, 85, 255);
+      color: white;
+      width: 25%;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  .content__tasks {
+    display: grid;
+
+    .content__text {
+      display: flex;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .text__task {
+      width: 80%;
+    }
+    .task__button {
+      margin: 0 5px;
+    }
+    .task__button--do {
+      background-image: url('/svg/done.svg');
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+    }
+    .task__button--done {
+      background-image: url('/svg/done-ok.svg');
+      width: 35px;
+      height: 35px;
+      background-repeat: no-repeat;
+    }
+
+    .task--done {
+      text-decoration: line-through;
+    }
+  }
+}
